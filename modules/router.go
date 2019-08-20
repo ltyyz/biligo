@@ -24,6 +24,9 @@ func RegisterRouter(r *gin.Engine) *gin.Engine {
 	log.Debug("注册404页面")
 	r.NoRoute(Page404)
 
+	log.Debug("注册 静态 文件")
+	r.Static("/static", "./static")
+
 	log.Debug("注册 auth 模块路由")
 	auth.RouteAuth(r)
 

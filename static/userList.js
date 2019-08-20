@@ -4,9 +4,9 @@ $(function () {
 
     function loadUserList() {
         let loginHeaders = new Headers();
-        loginHeaders.append('Authorized', localStorage.getItem("token"));
+        loginHeaders.append('Authorization', localStorage.getItem("token"));
 
-        let request = new Request('/api/system/user-list', {
+        let request = new Request('/api/system/user/list', {
             method: 'GET',
             headers: loginHeaders
         });
