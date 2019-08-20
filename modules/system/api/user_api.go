@@ -14,7 +14,7 @@ func Current(c *gin.Context) {
 }
 
 // 获取用户列表
-// @router /api/system/user-list [GET]
+// @router /api/system/user/userGET]
 func UserList(c *gin.Context) {
 	util.SuccessResult(service.GetUserList()).ToJSON(c)
 }

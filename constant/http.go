@@ -8,5 +8,5 @@ const (
 	ResultCodeSuccess = 0
 	ResultCodeFail    = 1
 
-	HttpHeaderAuthorized = "Authorized"
+	HttpHeaderAuthorized = "Authorization"
 )

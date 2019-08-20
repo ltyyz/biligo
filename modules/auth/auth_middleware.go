@@ -10,6 +10,7 @@ import (
 )
 
 // 登录拦截
+// BiliGo 使用请求头中加入 Authorized 参数来获取 token 值
 // TODO 使用 REDIS 优化性能
 func AuthMiddleware(c *gin.Context) {
 	auth := c.GetHeader(constant.HttpHeaderAuthorized)

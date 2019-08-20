@@ -5,9 +5,9 @@ BiliGo 是一个由多个 Go 开源库组装而成的快速开发 webapi 的系�
 
 ## 为什么有 BiliGo？
 
-1. 太强大的框架太复杂，没必要
-2. 太简单的web框架太简单，不够用
-3. BiliGo 的目标是上手即用
+1. 强大的框架太复杂，没必要
+2. 简单的框架太简单，不够用
+3. BiliGo 的目标是上手即用，像呼吸
 
 ## 使用到的库
 
@@ -15,6 +15,7 @@ BiliGo 是一个由多个 Go 开源库组装而成的快速开发 webapi 的系�
 - [logrus](https://github.com/sirupsen/logrus) 日志框架
 - [goprofile](https://github.com/ltyyz/goprofile) 多环境配置文件管理工具
 - [gorm](https://github.com/jinzhu/gorm) 数据库 orm 框架
+- [uuid](github.com/gofrs/uuid) uuid 生成库
 
 ## 文件夹介绍及主要文件
 
@@ -28,7 +29,7 @@ BiliGo 是一个由多个 Go 开源库组装而成的快速开发 webapi 的系�
 └─modules               # 接口代码
     ├─app               # **你的代码应该在这里**
     │  ├─api            #   uri 入口
-    │  ├─model          #   model 对象文件
+    │  ├─model          #   数据库 ORM 对象文件
     │  ├─service        #   service 代码
     │  └─router.go      #   模块路由设置
     ├─system            # BiliGo 内置系统模块（可能会写些东西）
@@ -43,13 +44,13 @@ BiliGo 是一个由多个 Go 开源库组装而成的快速开发 webapi 的系�
 
 ## 快速上手
 
-`go version 1.12.8`
+`go version 1.12.9`
 
 创建数据库，并导入脚本 `mysql/init.sql`
 
 修改配置文件 `config/config.env` 中的数据库相关配置 
 
-环境变量已有可以不用指定
+(环境变量已有可以不用指定)
 
 ```
 export GOPROXY=http://mirrors.aliyun.com/goproxy/
@@ -78,7 +79,4 @@ http://localhost:8888/
 
 ## 最后
 
-这个系统目标是写后台 api，所以不会加入模板处理
-
-
-
+BiliGo 的目标是编写 api ，所以不会加入模板处理

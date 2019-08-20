@@ -5,9 +5,9 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func RouteSys(r *gin.RouterGroup) {
+func RouteSystem(r *gin.RouterGroup) {
 	r.GET("/", api.Index)
 	r.GET("/current", api.Current)
 
-	r.GET("/user-list", api.UserList)
+	r.GET("/user/list", api.UserList)
 }
